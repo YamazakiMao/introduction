@@ -4,35 +4,133 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yamazaki |introduction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <title>Yamazaki | introduction</title>
+
+    <!-- adobeフォント使用スクリプト -->
+    <script>
+    (function(d) {
+        var config = {
+            kitId: 'nuj5ihw',
+            scriptTimeout: 3000,
+            async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+
+        (function(d) {
+        var config = {
+        kitId: 'nuj5ihw',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+    </script>
+    <!--ここまで-->
+
 </head>
 <body>
-
-    <header>
-        <img src="./img/main-img.jpg" alt="メイン画像">
-        <div class="icon">
-            <span></span>
-            <span></span>
-            <span></span>
+    <header id="item">
+        <div id="Home" class="left-position">
+            <img src="./img/object2.png" alt="オブジェクト2" class="object2">
+            <img src="./img/object3.png" alt="オブジェクト3" class="object3">
+            <img src="./img/main-img.jpg" alt="メイン画像" class="main-img">
+            <img src="./img/object1.png" alt="オブジェクト1" class="object1">
+            <img src="./img/greeting.png" alt="あいさつ" class="greeting">
         </div>
+
+
+        <div class="right-position">
+            <div id="hamburger">
+                <div id="icon">
+                    <span class="btn-line"></span>
+                    <span class="btn-line"></span>
+                    <span class="btn-line"></span>
+                </div>
+            </div>
+        
+            <img src="./img/icon1.png" alt="アイコン画像①" class="icon1-img">
+        </div>
+        <nav>
+            <ul id="menu">
+                <li class="menu-list">HOME</li>
+                <li class="menu-list">ABOUT</li>
+                <li class="menu-list">LIKE</li>
+                <li class="menu-list">CONTACT</li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="first-contents">
-
+    <section id="About" class="first-contents">
+        <div class="cover">
+            <div class="text">
+                <div class="text-cover">
+                    <h1>ABOUT</h1>
+                        <p class="introduce">
+                            はじめまして、山崎真緒と申します。<br>
+                            1997年10月15日生まれの25歳。<br>
+                            北海道北見市出身。<br>
+                            好きなことは旅行です。<br>
+                            オーストラリアに1年間留学していたので基本的な英会話が可能です。<br>
+                            前職は札幌のアプリ開発会社で運用保守業務を担当していました。<br>
+                            働く上で大切にしていることは、コミュニケーションを積極的に取ることです！<br>
+                            元々デザインに興味があり、webデザイナーの勉強を始めました。<br>
+                            将来的にプログラミングとデザインを兼任できる人材になることが目標です。<br>
+                        </p>
+                    </div>
+                </div>
+            <div class="image">
+                <img src="./img/profile.png" alt="プロフィール画像" class="profile-img">    
+            </div>
+        </div>  
     </section>
 
-    <section class="second-contents">
-
+    <section id="Like" class="second-contents">
+        <h1>LIKE</h1>
+        <div class="like-contents">
+            <ul>
+                <li><img src="./img/beer.jpg" alt="ビール画像" class="first-img"></li>
+                <li><img src="./img/dogs.jpg" alt="犬画像" class="second-img"></li>
+                <li><img src="./img/cake.jpg" alt="ケーキ画像" class="third-img"></li>
+                <li><img src="./img/camera.jpg" alt="カメラ画像" class="fourth-img"></li>
+                <li><img src="./img/travel.jpg" alt="旅行画像" class="fifth-img"></li>
+                <li><img src="./img/music.jpg" alt="音楽画像" class="six-img"></li>
+            </ul>
+        </div>
     </section>
 
-    <section class="third-contents">
-
+    <section id="Contact" class="third-contents">
+        <div class="third-contents-cover">
+            <h1>CONTACT</h1>
+            <p class="contact-text">Please feel free to contact me.</p>
+            <div id="click-alert" class="click-button">
+            <a>
+                click me
+            </a>
+        </div>
+        </div>
     </section>
 
     <footer>
-        
+        <div class="footer-cover">
+            <div class="left-footer">
+                <img src="./img/icon2.png" alt="アイコン画像②" class="footer-icon">
+                <p class="copyright">copyright ©︎ yamazaki introduction all rights reserved.</p>
+            </div>
+
+            <div class="right-footer">
+                <ul>
+                    <li class="nav"><a href="#Home">Home</a></li>
+                    <li class="nav"><a href="#About">About</a></li>
+                    <li class="nav"><a href="#Like">Like</a></li>
+                    <li class="nav"><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+            <img src="./img/toTop.png" alt="トップへ画像" class="toTop-img">
+        </div>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>

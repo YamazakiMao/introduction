@@ -1,1 +1,508 @@
 @charset "utf-8";
+
+/* リセットcss */
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: noto-sans-cjk-jp,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+*,
+::before,
+::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+
+* {
+    padding: 0; 
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+ul,li,dl,dd,dt,a {
+    text-decoration: none;
+    list-style: none;
+}
+/*=====================
+        ヘッダー 
+======================*/
+
+header {
+    height: auto;
+    display: flex;
+    position: relative;
+    z-index: 100;
+}
+
+.left-position {
+    width: 50%;   
+}
+
+.main-img {
+    width: 70%;
+    height: 100;
+    border-radius: 20%;
+    margin: 15% 0 15% 15%;
+    position: sticky;
+}
+
+/* オブジェクト画像 */
+.object1 {
+    width: 27%;
+    position: absolute;
+    top: 7%;
+    left: 37%;
+}
+
+.object2 {
+    width: 25%;
+    position: absolute;
+    bottom: 8%;
+    left: 35%;
+}
+
+.object3 {
+    width: 46%;
+    position: absolute;
+    bottom: -38%;
+    left: -16%;
+}
+
+.greeting {
+    width: 40%;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+}
+
+/* 右側 */
+.right-position {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* メニューを作成 */
+
+#menu {
+    position: fixed;
+    right: -100%; 
+    width: 70%;
+    height: 100vh;
+    margin-left: auto;
+    transition-duration: 1s;
+    /* メニューを縦に */
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+    background-color: #333;
+
+}
+
+.menu-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    font-size: 5vh;
+	width: 100%;
+	height: 20vh;
+}
+
+.menu-list:nth-child(1){
+    margin-top: 5%;
+}
+
+.menu-list:hover {
+	color: #7E7E7E;
+	cursor: pointer;
+	transition: .3s;
+}
+
+/***** メニューオープン時位置0にして画面内に *****/
+#menu.open {
+	right: 0;
+}
+
+/* ハンバーガーメニューの外枠作成 */
+#hamburger {
+    width: 80px;
+    height: 80px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    z-index: 10;
+    position: fixed;
+}
+
+
+/* ハンバーガーメニューのアイコン*/
+#icon {
+    cursor: pointer;
+    width: 28px;
+}
+
+/* ハンバーガーメニューの線を作成 */
+#icon span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 100vh;
+    background-color: #fff;
+}
+
+
+#icon span:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+/* アニメーションの速度を決める */
+#icon,
+#icon span {
+    transition: all .4s ease-in-out;
+}
+
+#icon.is-active span:nth-child(2) {
+    width: 0;
+}
+
+#icon.is-active span:nth-child(1),
+#icon.is-active span:nth-child(3) {
+    transition-delay: .4s;
+}
+
+#icon.is-active span:nth-child(1) {
+    transform: translateY(9px);
+}
+
+#icon.is-active span:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg);
+}
+
+#icon.is-active {
+    transition-delay: 0.8s;
+    transform: rotate(45deg);
+}
+
+/* アイコン&タイトル */
+.icon1-img {
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+}
+
+/*===========================
+        ファーストコンテンツ
+============================*/
+
+.first-contents {
+    width: 100%;
+    height: auto;
+    background-color: #8AA696;
+    /* position: sticky; */
+    padding: 15%;
+}
+
+.cover {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.text {
+    width: 50%;
+    display: grid;
+    align-items: center;
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+
+.text.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.text-cover {
+    width: 100%;
+}
+
+.first-contents h1 {
+    color: #fff;
+    font-size: 4vw;
+    font-family: futura-pt,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.introduce {
+    color: #fff;
+    font-size: 1vw;
+}
+
+.image {
+    width: 30vw;
+}
+
+.profile-img {
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 50%;
+}
+
+
+/*===========================
+        セカンドコンテンツ
+============================*/
+
+.second-contents {
+
+    margin: 0 auto;
+}
+
+.second-contents h1 {
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    font-family: futura-pt,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.like-contents ul {
+    display: grid;
+    grid-template-rows: repeat(5,20%);
+    grid-template-columns: repeat(5,15%);
+    gap: 2rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.like-contents ul li{
+    overflow: hidden;
+}
+
+.like-contents ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.like-contents ul li:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 1/4;
+}
+
+.like-contents ul li:nth-child(2){
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+.like-contents ul li:nth-child(3){
+    grid-column: 3/7;
+    grid-row: 1/2;
+}
+
+.like-contents ul li:nth-child(4){
+    grid-column: 3/5;
+    grid-row: 2/5;
+}
+
+.like-contents ul li:nth-child(5){
+    grid-column: 5/7;
+    grid-row: 2/4;
+}
+
+.like-contents ul li:nth-child(6){
+    grid-column: 5/7;
+    grid-row: 4/5;
+}
+
+/*===========================
+        サードコンテンツ
+============================*/
+
+.third-contents {
+    margin: 0 auto;
+}
+
+.third-contents-cover {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #8AA696;
+    padding: 6vh;
+}
+
+.third-contents-cover h1, .contact-text, .click-button {
+    text-align: center;
+}
+
+.third-contents-cover h1{
+    font-size: 4vw;
+    color: #fff;
+    font-family: futura-pt,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.third-contents-cover p {
+    color: #fff;
+    font-size: 1vw;
+    margin-bottom: 50px;
+}
+
+/* Contactボタン */
+.click-button a {
+    background: #fff;
+    border-radius: 30vw;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #333;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    z-index:0;
+    overflow: hidden;
+} 
+
+.click-button a:before {
+    border-radius: 30vw;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: #333;
+    transition: .3s;
+    left:0;
+}
+.click-button a:hover {
+    color: #FFF;
+}
+.click-button a:hover:before {
+    width: 100%;
+    z-index: -1;
+}
+
+/*=====================
+        フッター
+=======================*/
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    margin-top: 10%;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-cover {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    padding: 5vh;
+}
+
+.left-footer p {
+    font-size: 1vw;
+}
+
+.footer-icon {
+    width: 8vw;
+}
+
+.right-footer {
+    margin-left: auto;
+}
+
+.right-footer ul li:hover {
+    opacity: 0.6;
+}
+
+.right-footer li a {
+    font-size: 1.5vw;
+    color: #fff;
+    font-family: futura-pt,sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.toTop-img {
+    width: 8vw;
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    cursor: pointer;
+}
+
+/*=====================
+        レスポンシブ
+=======================*/
+
+
+@media screen and (max-width: 481px) {
+
+    .cover {
+        display: block;
+    }
+
+    .text {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        line-height: 15px;
+    }
+
+
+    .image {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .image img {
+        width: 100%;
+        border-radius: 10;
+    }
+
+    .like-contents ul {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .like-contents li img {
+        height: 200px;
+    }
+
+    .third-contents {
+        margin-top: 20px;
+    }
+}
+
+
