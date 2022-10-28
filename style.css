@@ -300,6 +300,7 @@ header {
 
 .like-contents ul li{
     overflow: hidden;
+    background-color: #000;
 }
 
 .like-contents ul li img {
@@ -336,6 +337,94 @@ header {
 .like-contents ul li:nth-child(6){
     grid-column: 5/7;
     grid-row: 4/5;
+}
+
+.like-contents ul li img:hover {
+    opacity: 0.5;
+}
+
+.img1-cover {
+    position: relative;
+}
+
+
+#img1-txt {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.img2-cover {
+    position: relative;
+}
+
+
+#img2-txt {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.img3-cover {
+    position: relative;
+}
+
+
+#img3-txt {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.img4-cover {
+    position: relative;
+}
+
+
+#img4-txt {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.img5-cover {
+    position: relative;
+}
+
+
+#img5-txt {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.img6-cover {
+    position: relative;
+}
+
+
+#img6-txt {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s ease;
 }
 
 /*===========================
@@ -387,6 +476,7 @@ header {
     font-weight: 500;
     z-index:0;
     overflow: hidden;
+    cursor: pointer;
 } 
 
 .click-button a:before {
@@ -404,6 +494,7 @@ header {
 .click-button a:hover {
     color: #FFF;
 }
+
 .click-button a:hover:before {
     width: 100%;
     z-index: -1;
@@ -502,6 +593,15 @@ footer {
 
     .third-contents {
         margin-top: 20px;
+    }
+
+    .like-contents ul li{
+        overflow: hidden;
+        background-color: #fff;
+    }
+    
+    #img1-txt {
+        color: #000;
     }
 }
 
