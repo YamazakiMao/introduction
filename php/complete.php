@@ -42,7 +42,7 @@ if (!empty($_SESSION['token']) && $_POST['token'] === $_SESSION['token']) {
     EOM;
 
     // 送信元のメールアドレスを変数fromEmailに格納(本番環境へのデプロイ時に正規のアドレスに変更すること！)
-    $fromEmail = "m.s0617r.e@gmail.com";
+    $fromEmail = "maosato1015@gmail.com";
 
     // 送信元の名前を変数fromNameに格納
     $fromName = "Yamazaki Portfolio";
@@ -51,8 +51,10 @@ if (!empty($_SESSION['token']) && $_POST['token'] === $_SESSION['token']) {
     $header = "From: " . mb_encode_mimeheader($fromName) . "<{$fromEmail}>";
 
     // 受信用のメールアドレスを変数myEmailに格納(本番環境へのデプロイ時に正規のアドレスに変更すること！)
-    $myEmail = "m.s0617r.e@gmail.com";
+    $myEmail = "maosato1015@gmail.com";
 
+    mb_language("ja");
+    mb_internal_encoding("UTF-8");
     // フォーム入力者へメールを送信する
     mb_send_mail($email, $subject, $body, $header);
 
