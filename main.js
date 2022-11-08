@@ -35,10 +35,6 @@ function scroll_effect() {
 }
   window.addEventListener('scroll', scroll_effect); // スクロール時に実行
 
-//click meボタンアラート
-document.getElementById("click-alert").addEventListener("click", function(){
-    window.alert("まだできていません。")
-});
 
 // スムーズにトップへ戻る
 const pagetopBtn = document.querySelector('.toTop-img');

@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+/* リセットcss */
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: noto-sans-cjk-jp,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+*,
+::before,
+::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+
+* {
+    padding: 0; 
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+ul,li,dl,dd,dt,a {
+    text-decoration: none;
+    list-style: none;
+}
+
+/*=============
+    ヘッダー
+===============*/
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 5vh;
+}
+
+header h1 {
+    font-size: 3vw;
+    font-family: futura-pt,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/*=============
+    フォーム
+===============*/
+
+#form-area {
+    width: 40%;
+    margin: 0 auto;
+    /* padding: 5vh 10vw; */
+}
+
+/* form-nav */
+
+.progressbar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+}
+.progressbar .item {
+    position: relative;
+    width: 33%;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 0;
+    line-height: 1.5;
+    background: #F5F5F5;
+    color: #999999;
+}
+.progressbar .item:not(:last-child)::before,
+.progressbar .item:not(:last-child)::after {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    content: '';
+    border: 37px solid transparent;
+    border-left: 20px solid #F5F5F5;
+    margin: auto;
+}
+.progressbar .item:not(:last-child)::before {
+    margin-left: 1px;
+    border-left-color: #FFF;
+}
+
+@media screen and (max-width: 767px) {
+.progressbar .item {
+    font-size: 11px;
+    line-height: 1.4;
+    padding: 10px 0;
+}
+.progressbar .item:not(:last-child)::before,
+.progressbar .item:not(:last-child)::after {
+    border-width: 25px;
+    border-left-width: 12px;
+}
+}
+
+/* active */
+
+.progressbar .item.active {
+    z-index: 1;
+    background: #8AA696;
+    color: #FFF;
+}
+.progressbar .item.active:not(:last-child)::after {
+    border-left-color: #8AA696;
+}
+.progressbar .item.active:not(:last-child)::before {
+    border-left: none;
+}
+
+.main-text {
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+.main-form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-form {
+    margin-bottom: 3vh;
+}
+
+.contact-form input {
+    width: 100%;
+    height: 5vh;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+    border: none;
+    background-color: #F5F5F5;
+    padding: 0 10px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 15vh;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+    border: none;
+    background-color: #F5F5F5;
+    resize: none;
+    padding: 10px;
+}
+
+.contact-textarea {
+    overflow-wrap: break-word;
+    inline-size: 100%;
+}
+
+.contact-form span {
+    background-color: #333;
+    border-radius: 10%;
+    font-size: 1vh;
+    padding: 2px 7px;
+    color: #fff;
+    margin-left: 3px;
+}
+
+.btn {
+    height: 5vh;
+    border: none;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+.confirm-btn {
+    display: flex;
+}
+
+.btn1 {
+    margin-right: 3vh;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #FFF;
+    transition: all .3s ease;
+}
+
+.image-cover {
+    text-align: center;
+}
+
+#form-area img {
+    width: 50%;
+    
+}
+
+
+
+/*=====================
+        フッター
+=======================*/
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    margin-top:5%;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-cover {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    padding: 5vh;
+}
+
+.left-footer p {
+    font-size: 1vw;
+}
+
+.footer-icon {
+    width: 8vw;
+}
+
+.right-footer {
+    margin-left: auto;
+}
+
+.right-footer ul li:hover {
+    opacity: 0.6;
+}
+
+.right-footer li a {
+    font-size: 1.5vw;
+    color: #fff;
+    font-family: futura-pt,sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.toTop-img {
+    width: 8vw;
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    cursor: pointer;
+}
