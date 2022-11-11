@@ -17,6 +17,14 @@ document.getElementById("icon").addEventListener("click", function() {
 });
 
 
+// const menuList = document.querySelectorAll('.menu-list');
+
+function menuList(){
+    document.getElementById("icon").classList.toggle("is-active");
+    document.getElementById("menu").classList.toggle("open"); 
+};
+
+
 // スクロールでふわっと表示
 function scroll_effect() {
     var element = document.getElementsByClassName('text');
