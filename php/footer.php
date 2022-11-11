@@ -50,5 +50,5 @@
             <img src="../img/toTop.png" alt="トップへ画像" class="toTop-img">
         </div>
     </footer>
-    <script src="../main.js"></script>
+    <script src="../footer.js"></script>
 </body>
