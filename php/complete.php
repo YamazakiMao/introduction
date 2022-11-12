@@ -121,7 +121,7 @@ if (!empty($_SESSION['token']) && $_POST['token'] === $_SESSION['token']) {
             <p>入力したメールアドレス宛に確認メールを送信しましたので、ご確認ください。</p>
             <p>尚、数十分経過してもメールが届かない場合はメッセージが送信できていない可能性がございます。</p>
             <p style="margin-bottom: 5vh;">お手数ですが、トップページよりもう一度メッセージの送信をお願いいたします。</p>
-            <a href="index.php">
+            <a href="../index.html">
                 <button class="btn" type="button">トップページに戻る</button>
             </a>
         </div>

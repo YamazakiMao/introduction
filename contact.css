@@ -98,19 +98,6 @@ header h1 {
     border-left-color: #FFF;
 }
 
-@media screen and (max-width: 767px) {
-.progressbar .item {
-    font-size: 11px;
-    line-height: 1.4;
-    padding: 10px 0;
-}
-.progressbar .item:not(:last-child)::before,
-.progressbar .item:not(:last-child)::after {
-    border-width: 25px;
-    border-left-width: 12px;
-}
-}
-
 /* active */
 
 .progressbar .item.active {
@@ -256,4 +243,39 @@ footer {
     top: -30%;
     right: 10%;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 767px) {
+    .progressbar .item {
+        font-size: 11px;
+        line-height: 1.4;
+        padding: 10px 0;
+    }
+    .progressbar .item:not(:last-child)::before,
+    .progressbar .item:not(:last-child)::after {
+        border-width: 25px;
+        border-left-width: 12px;
+    }
+
+    #form-area {
+        width: 80%;
+        margin: 0 auto;
+        /* padding: 5vh 10vw; */
+    }
+
+    .footer-cover {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .copyright {
+        width: 80%;
+    }
+
+    .btn {
+        margin-bottom: 50px;
+    }
+    
 }
