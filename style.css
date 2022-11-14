@@ -684,6 +684,10 @@ footer {
     .copyright {
         width: 80%;
     }
+
+    .introduce {
+        font-size: 3vw;
+    }
 }
 
 
